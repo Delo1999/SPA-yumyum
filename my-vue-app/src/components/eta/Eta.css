@@ -1,0 +1,40 @@
+.eta {
+  background-color: #605858;
+  color: rgba(244, 243, 241, 0.9411764706);
+  width: 390px;
+  height: 844px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eta__image {
+  background-image: url("/eta-bild.png");
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.eta__title {
+  padding-top: 470px;
+  text-align: center;
+}
+
+.eta__eta {
+  text-align: center;
+}
+
+.eta__ordernumber {
+  text-align: center;
+}
+
+button {
+  width: 95%;
+  height: 80px;
+  justify-content: center;
+  margin: 0 auto;
+}/*# sourceMappingURL=Eta.css.map */

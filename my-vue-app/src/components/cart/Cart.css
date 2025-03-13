@@ -1,0 +1,23 @@
+.cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 390px;
+  height: 844px;
+  background-color: #EEEEEE;
+}
+
+.cart__btn-remove {
+  width: 50px;
+}
+
+.cart__btn-clear {
+  width: 50px;
+}
+
+.btn {
+  width: 50px;
+}/*# sourceMappingURL=Cart.css.map */

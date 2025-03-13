@@ -1,0 +1,133 @@
+@use "../Partials/mixins.scss" as *;
+@use "../Partials/variables.scss" as *;
+
+.menu {
+padding-top: 80px;
+height: 100vh;
+width: 100vw;
+background: #8ED8BF;
+background-image:url("../../../public/55949d7ebe28c56421c1160bd1905b3a.png");
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu__list {
+background: #605858;
+list-style-type: none;
+width: 360px;
+border-radius: 4px;
+box-shadow: 0px 0px 16px 0px #00000029;
+	;
+}
+
+.menu__title {
+background: #605858;
+color: $font-white-color;
+@include typography($primary-font-family, 700, 32px, 100%, 0%, uppercase);
+padding-top: 25px;
+padding-bottom: 10px;
+border-radius: 4px;
+padding-left: 25px;
+	border-bottom: 2px dotted grey;
+}
+
+.menu__item {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	border-top: 2px dotted grey;
+	border-bottom: 2px dotted grey;
+	padding:0px 25px;
+	color: red;
+}
+
+.menu__item-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.menu__item-name {
+	margin-right: 20px;
+	color: $font-white-color;
+	@include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+	
+}
+
+.menu__item-dots {
+		flex-grow: 1;
+		border-bottom: 2px dotted black;
+		margin-top: 2%;
+		background-color: $font-white-color;
+}
+
+.menu__item-price {
+	margin-left: 20px;
+	color: $font-white-color;
+@include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase)
+
+}
+
+.menu__item-ingredients {
+		color: $font-white-color;
+		@include typography($primary-font-family, 400, 14px, 100%, 0%, lowercase);
+				margin-bottom: 20px;
+	}
+	
+	.menu__no-items {
+		color: $font-white-color;
+		@include typography($primary-font-family, 700, 22px, 100%, 0%, none)
+	}
+	
+	.menu__dip-title {
+		color: $font-white-color;
+		@include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+		padding-left: 25px;
+		padding-top: 20px;
+		padding-bottom: 30px;
+			border-top: 2px dotted grey;
+		
+	}
+.menu__dip-dots {
+		flex-grow: 1;
+		border-bottom: 2px dotted $font-white-color;
+		margin-top: 2%;
+					margin-left: 20px;
+		color: #605858;;
+}
+
+.menu__dip-price {
+	color: $font-white-color;
+@include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+	margin-left: 20px;
+}
+
+.menu__dip-section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-content: space-around;
+		gap: 30px 10px;
+		padding-bottom: 25px;
+		
+	}
+
+.menu__dip-item-rectangle {
+	width: 92px;
+		height: 33px;
+		border-radius: 4px;
+		gap: 10px;
+		padding-top: 8px;
+		padding-right: 12px;
+		padding-bottom: 8px;
+		padding-left: 12px;
+		background: #F1F0EC3D;
+}
+
+.menu__dip-item-name {
+	color: $font-white-color;
+		@include typography($primary-font-family, 500, 14px, 100%, 0%, lowercase);
+}
+

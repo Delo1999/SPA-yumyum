@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__rectangle {
+  width: 64px;
+  height: 64px;
+  border: 2px solid rgba(244, 243, 241, 0.9411764706);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo-text {
+  color: rgba(244, 243, 241, 0.9411764706);
+  font-family: "Ubunto Mono", sans-serif;
+  font-weight: 400;
+  font-size: 29px;
+  line-height: 25px;
+  letter-spacing: 39%;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  width: 64px;
+  height: 64px;
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__logo-basket {
+  background-image: url("../../assets/Union.svg");
+  width: 32px;
+  height: 32px;
+}/*# sourceMappingURL=Header.css.map */

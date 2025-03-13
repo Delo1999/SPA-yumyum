@@ -1,0 +1,43 @@
+.receipt {
+  background-color: #605858;
+  width: 390px;
+  height: 844px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.receipt__customer {
+  width: 95%;
+  background-color: #EEEEEE;
+  height: 500px;
+  position: absolute;
+  top: 150px;
+}
+
+.receipt__logo {
+  background-image: url("../../../public/logo.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.receipt__title {
+  color: #353131;
+  text-align: center;
+}
+
+.receipt__totalt {
+  color: #353131;
+  background-color: rgba(53, 49, 49, 0.2392156863);
+  text-align: left;
+}
+
+button {
+  width: 95%;
+  height: 80px;
+  position: absolute;
+  top: 750px;
+}/*# sourceMappingURL=Receipt.css.map */

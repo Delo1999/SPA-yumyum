@@ -1,0 +1,15 @@
+@mixin typography ($font-family ,$font-weight, $font-size, $line-height, $letter-spacing, $text-transform) {
+	font-family: $font-family;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	text-transform: $text-transform;
+}
+
+// font-family: Fira Sans;
+// font-weight: 700;
+// font-size: 22px;
+// line-height: 100%;
+// letter-spacing: 0%;
+// text-transform: uppercase;

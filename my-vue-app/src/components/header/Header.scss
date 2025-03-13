@@ -1,0 +1,42 @@
+@use "../Partials/mixins.scss" as *;
+@use "../Partials/variables.scss" as *;
+
+
+.header {
+display: flex;
+justify-content:space-between ;
+padding: 10px 20px;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+.header__rectangle {
+width: 64px;
+height: 64px;
+border: 2px solid $font-white-color;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.header__logo-text {
+color: $font-white-color;
+@include typography($secondary-font-family, 400, 29px, 25px, 39%, uppercase);
+}
+
+.header__logo {
+width: 64px;
+height: 64px;
+background-color: $order-page-background-color;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.header__logo-basket {
+background-image: url("../../assets/Union.svg");
+width: 32px;
+height: 32px;
+}
