@@ -52,7 +52,7 @@ export const MenuList: React.FC = () => {
         {/* Rendera de andra menyalternativen (som inte är dipsåser) */}
         {filteredMenuItems.length > 0 ? (
           filteredMenuItems.map((item, index) =>
-            item.type !== "dip" ? (
+            item.type !== "dip" && item.type !== "drink" ? (
               <li
                 onClick={() => dispatch(addToBasket(item))}
                 key={item.id + index}
@@ -91,6 +91,32 @@ export const MenuList: React.FC = () => {
                 >
                   <span className="menu__dip-item-rectangle">
                     <span className="menu__dip-item-name">{dipItem.name}</span>
+                  </span>
+                </div>
+              ))}
+          </div>
+        )}
+
+        {/* Rendera drycker under en separat rubrik */}
+        <h2 className="menu__drink-title">
+          Dryck
+          <span className="menu__drink-dots"> ........................</span>
+          <span className="menu__drink-price">19 SEK</span>
+        </h2>
+        {filteredMenuItems.some((item) => item.type === "drink") && (
+          <div className="menu__drink-section">
+            {filteredMenuItems
+              .filter((item) => item.type === "drink")
+              .map((drinkItem, index) => (
+                <div
+                  onClick={() => dispatch(addToBasket(drinkItem))}
+                  key={drinkItem.id + index}
+                  className="menu__drink-item"
+                >
+                  <span className="menu__drink-item-rectangle">
+                    <span className="menu__drink-item-name">
+                      {drinkItem.name}
+                    </span>
                   </span>
                 </div>
               ))}
