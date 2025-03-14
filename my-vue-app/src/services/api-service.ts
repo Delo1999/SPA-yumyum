@@ -85,7 +85,6 @@ async function fetchData(endpoint: string, method: string = "GET", body?: any) {
 //     const tenantId = await getTenantId();
 //     console.log("Tenant ID:", tenantId);
 
-//     // Om du vill logga tenantId igen senare, kan du anropa getTenantId() på nytt
 //     const newTenantId = await getTenantId();
 //     console.log("New Tenant ID:", newTenantId);
 //   } catch (error) {
