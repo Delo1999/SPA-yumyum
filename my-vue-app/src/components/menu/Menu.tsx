@@ -21,12 +21,15 @@ export interface MenuItem {
 export const MenuList: React.FC = () => {
   const dispatch = useAppDispatch(); // Använda dispatch för att skicka actions till store
 
-  useEffect(() => {
-    dispatch(fetchMenuItems());
-  }, [dispatch]);
-
   const isCartOpen = useAppSelector((state) => state.order.isCartOpen);
   const menuItems = useAppSelector((state) => state.menu.items);
+
+  useEffect(() => {
+    if (menuItems.length > 0) {
+      return;
+    }
+    dispatch(fetchMenuItems());
+  }, [dispatch, menuItems]);
 
   const filteredMenuItems = menuItems
     .filter((item) => item.type !== "drink")

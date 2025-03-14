@@ -18,6 +18,8 @@
 
 .cart__ulist {
   list-style-type: none;
+  max-height: 550px;
+  overflow-y: auto;
 }
 
 .cart__item {

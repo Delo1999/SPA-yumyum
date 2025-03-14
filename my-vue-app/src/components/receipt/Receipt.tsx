@@ -13,13 +13,16 @@ const Receipt: React.FC = () => {
         <div className="receipt__title">
           Kvitto <br></br>
           Ordernummer: {order?.id}
-          {order?.items.map((item, index) => (
-            <div className="receipt__container" key={item.id + index}>
-              <p className="receipt__name">{item.name}</p>
-              <span className="receipt__dots"></span>
-              <p className="receipt__price">{item.price} SEK</p>
-            </div>
-          ))}
+          <div className="receipt__scroll">
+            {" "}
+            {order?.items.map((item, index) => (
+              <div className="receipt__container" key={`${item.id}+${index}`}>
+                <p className="receipt__name">{item.name}</p>
+                <span className="receipt__dots"></span>
+                <p className="receipt__price">{item.price} SEK</p>
+              </div>
+            ))}{" "}
+          </div>
           <div className="receipt__totalt">
             <div className="receipt__totalt-container">
               <span>Totalt:</span>

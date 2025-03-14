@@ -36,6 +36,11 @@
   @include typography($primary-font-family, 400, 18px, 100%, 0%, uppercase);
 }
 
+.receipt__scroll {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
 .receipt__container {
   display: flex;
   justify-content: space-between;
