@@ -20,19 +20,39 @@ export const Cart: React.FC = () => {
     dispatch(clearBasket());
   };
 
+  // Aggregating items: Group by name and calculate quantity and total price
+  const aggregatedItems = basketItems.reduce((acc, item) => {
+    const existingItem = acc.find((i) => i.name === item.name);
+    if (existingItem) {
+      existingItem.quantity += 1; // Increase the quantity
+      existingItem.totalPrice += item.price; // Add the price to the total price
+    } else {
+      acc.push({
+        name: item.name,
+        quantity: 1,
+        totalPrice: item.price,
+        id: item.id,
+      });
+    }
+    return acc;
+  }, [] as { name: string; quantity: number; totalPrice: number; id: number }[]);
+
   return (
     <div className="cart">
       {basketItems.length > 0 ? (
         <div className="cart__container">
           <ul className="cart__ulist">
-            {basketItems.map((item, index) => (
-              <li className="cart__item" key={`${item.id}-${index}`}>
-                <p className="cart__item-name">{item.name}</p>{" "}
+            {aggregatedItems.map((item, index) => (
+              <li className="cart__item" key={`${item.name}-${index}`}>
+                <p className="cart__item-name">{item.name}</p>
                 <span className="cart__dots"></span>
-                <p className="cart__item-price">{item.price} SEK</p>
+                <p className="cart__item-quantity">Antal: {item.quantity}</p>
+                <p className="cart__item-total-price">
+                  Totalt: {item.totalPrice} SEK
+                </p>
                 <button
                   className="cart__btn-remove"
-                  onClick={() => handleRemoveItem(item.id)}
+                  onClick={() => handleRemoveItem(item.id)} // Remove based on item name (or ID if you prefer)
                 >
                   Ta bort
                 </button>
@@ -46,7 +66,11 @@ export const Cart: React.FC = () => {
             <div className="cart__total-container">
               <span>Totalt:</span>
               <span>
-                {basketItems.reduce((total, item) => total + item.price, 0)} SEK
+                {aggregatedItems.reduce(
+                  (total, item) => total + item.totalPrice,
+                  0
+                )}{" "}
+                SEK
               </span>
             </div>
           </div>

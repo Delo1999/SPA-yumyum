@@ -40,9 +40,17 @@
   border-bottom: 2px dotted black;
   margin-bottom: 4%;
 }
-.cart__item-price {
+.cart__item-quantity {
   color: $font-black-color;
-  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  @include typography($primary-font-family, 500, 12px, 100%, 0%, uppercase);
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+.cart__item-total-price {
+  color: $font-black-color;
+  @include typography($primary-font-family, 500, 12px, 100%, 0%, uppercase);
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
