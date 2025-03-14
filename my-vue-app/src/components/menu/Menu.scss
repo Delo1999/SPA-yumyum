@@ -16,6 +16,8 @@
   width: 360px;
   border-radius: 4px;
   box-shadow: 0px 0px 16px 0px #00000029;
+  max-height: 684px;
+  overflow-y: auto;
 }
 
 .menu__title {
@@ -46,10 +48,18 @@
   margin-top: 20px;
 }
 
+.menu__item-header.clicked {
+  background-color: red;
+}
+
 .menu__item-name {
   margin-right: 20px;
   color: $font-white-color;
   @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+}
+
+.menu__item-name.clicked {
+  color: red;
 }
 
 .menu__item-dots {

@@ -27,7 +27,7 @@ export const MenuList: React.FC = () => {
   }, [dispatch, menuItems]);
 
   const filteredMenuItems = menuItems
-    .filter((item) => item.type !== "drink")
+    // .filter((item) => item.type !== "drink")
     .map((item) => {
       // Om namnet är "Wonton Standard", ändra namnet på dippan
       if (item.name === "Wonton Standard") {
