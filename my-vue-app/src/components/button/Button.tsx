@@ -7,6 +7,7 @@ type ButtonProps = {
   color: string;
   border?: string;
   onClick?: () => void;
+  className?: string;
 };
 
 const Button = ({
@@ -15,10 +16,11 @@ const Button = ({
   color,
   border = "none",
   onClick,
+  className = "",
 }: ButtonProps): React.JSX.Element => {
   return (
     <button
-      className="btn"
+      className={className}
       style={{ backgroundColor: backgroundColor, color: color, border }}
       onClick={onClick}
     >

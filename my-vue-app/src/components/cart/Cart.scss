@@ -1,28 +1,98 @@
 @use "../Partials/mixins.scss" as *;
 @use "../Partials/variables.scss" as *;
 
-
 .cart {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-position: absolute;
-top: 0;
-left: 0;
-	width: 390px;
-	height: 844px;
-	background-color: #EEEEEE;
+  position: fixed;
+  top: 84px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 84px);
+  background-color: #eeeeee;
+  margin-top: 25px;
+}
+
+.cart__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__ulist {
+  list-style-type: none;
+}
+
+.cart__item {
+  display: flex;
+}
+
+.cart__item-name {
+  color: $font-black-color;
+  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+
+.cart__dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted black;
+  margin-bottom: 4%;
+}
+.cart__item-price {
+  color: $font-black-color;
+  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 .cart__btn-remove {
-	width: 50px;
+  width: 50px;
+  margin-right: 10px;
 }
 
 .cart__btn-clear {
-	width: 50px;
+  color: #f4f3f1f0;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: $font-black-color;
+  @include typography($primary-font-family, 500, 22px, 100%, 0%, uppercase);
+  padding: 5px;
+  border: 2px solid black;
 }
 
+.cart__total-container {
+  color: $font-black-color;
+  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  background-color: #3531313d;
+  text-align: left;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  top: 435px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 82%;
+}
 
-.btn{
-	width: 50px;
+.cart__btn-buy {
+  color: $font-black-color;
+  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  width: 390px;
+  height: 60px;
+  justify-content: end;
+  align-items: flex-end;
+  align-content: end;
+  position: absolute;
+  top: 89%;
+}
+
+.cart__empty {
+  color: $font-black-color;
+  @include typography($primary-font-family, 700, 22px, 100%, 0%, uppercase);
+  margin-top: 50%;
+  justify-self: center;
 }

@@ -32,13 +32,15 @@ export async function getApiKey(): Promise<string> {
   }
 }
 
-async function fetchData(endpoint: string) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function fetchData(endpoint: string, method: string = "GET", body?: any) {
   const apiKey = await getApiKey();
 
   return await fetch(
     `https://fdnzawlcf6.execute-api.eu-north-1.amazonaws.com/${endpoint}`,
     {
-      method: "GET",
+      body: JSON.stringify(body),
+      method,
       headers: { "x-zocom": apiKey },
     }
   );
@@ -94,7 +96,5 @@ async function fetchData(endpoint: string) {
 // logTenantId();
 
 const myTenantId = "y71n";
-
-fetchData(`${myTenantId}/orders`);
 
 export { fetchData, myTenantId };

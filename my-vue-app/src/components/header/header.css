@@ -30,14 +30,31 @@
 .header__logo {
   width: 64px;
   height: 64px;
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
 }
 
 .header__logo-basket {
   background-image: url("../../assets/Union.svg");
   width: 32px;
   height: 32px;
+}
+
+.header__logo-count {
+  color: rgb(255, 255, 255);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: rgb(229, 103, 78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-family: "PT Serif", serif;
+  font-size: 12px;
 }/*# sourceMappingURL=Header.css.map */

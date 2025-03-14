@@ -25,6 +25,7 @@ export const MenuList: React.FC = () => {
     dispatch(fetchMenuItems());
   }, [dispatch]);
 
+  const isCartOpen = useAppSelector((state) => state.order.isCartOpen);
   const menuItems = useAppSelector((state) => state.menu.items);
 
   const filteredMenuItems = menuItems
@@ -87,17 +88,25 @@ export const MenuList: React.FC = () => {
 
   // Visa menydatan om den är hämtad
   return (
-    <div className="menu">
+    <div
+      className="menu"
+      style={{
+        backgroundImage: isCartOpen
+          ? "none"
+          : `url("../../../public/55949d7ebe28c56421c1160bd1905b3a.png")`,
+        backgroundColor: isCartOpen ? "#eeeeee" : "#8ed8bf",
+      }}
+    >
       <ul className="menu__list">
         <h1 className="menu__title">Meny</h1>
 
         {/* Rendera de andra menyalternativen (som inte är dipsåser) */}
         {filteredMenuItems.length > 0 ? (
-          filteredMenuItems.map((item) =>
+          filteredMenuItems.map((item, index) =>
             item.type !== "dip" ? (
               <li
                 onClick={() => dispatch(addToBasket(item))}
-                key={item.id}
+                key={item.id + index}
                 className="menu__item"
               >
                 <div className="menu__item-header">
@@ -125,10 +134,10 @@ export const MenuList: React.FC = () => {
           <div className="menu__dip-section">
             {filteredMenuItems
               .filter((item) => item.type === "dip")
-              .map((dipItem) => (
+              .map((dipItem, index) => (
                 <div
                   onClick={() => dispatch(addToBasket(dipItem))}
-                  key={dipItem.id}
+                  key={dipItem.id + index}
                   className="menu__dip-item"
                 >
                   <span className="menu__dip-item-rectangle">

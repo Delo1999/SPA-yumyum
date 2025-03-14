@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .eta {
   background-color: #605858;
   color: rgba(244, 243, 241, 0.9411764706);
@@ -22,19 +23,62 @@
 .eta__title {
   padding-top: 470px;
   text-align: center;
+  color: rgba(244, 243, 241, 0.9411764706);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
 .eta__eta {
   text-align: center;
+  color: rgba(244, 243, 241, 0.9411764706);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
 .eta__ordernumber {
   text-align: center;
+  color: rgba(244, 243, 241, 0.9411764706);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
 }
 
-button {
+.eta__button-beställning,
+.eta__button-kvitto {
   width: 95%;
   height: 80px;
   justify-content: center;
-  margin: 0 auto;
+}
+
+.eta__button-beställning {
+  color: rgba(244, 243, 241, 0.9411764706);
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.eta__button-kvitto {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-left: 10px;
 }/*# sourceMappingURL=Eta.css.map */

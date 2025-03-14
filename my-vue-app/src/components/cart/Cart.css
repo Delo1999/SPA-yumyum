@@ -1,23 +1,126 @@
 .cart {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 84px;
   left: 0;
-  width: 390px;
-  height: 844px;
-  background-color: #EEEEEE;
+  width: 100%;
+  height: calc(100% - 84px);
+  background-color: #eeeeee;
+  margin-top: 25px;
+}
+
+.cart__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart__ulist {
+  list-style-type: none;
+}
+
+.cart__item {
+  display: flex;
+}
+
+.cart__item-name {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+
+.cart__dots {
+  flex-grow: 1;
+  border-bottom: 2px dotted black;
+  margin-bottom: 4%;
+}
+
+.cart__item-price {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-right: 20px;
 }
 
 .cart__btn-remove {
   width: 50px;
+  margin-right: 10px;
 }
 
 .cart__btn-clear {
-  width: 50px;
+  color: rgba(244, 243, 241, 0.9411764706);
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 2px solid black;
 }
 
-.btn {
-  width: 50px;
+.cart__total-container {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  background-color: rgba(53, 49, 49, 0.2392156863);
+  text-align: left;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  top: 435px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 82%;
+}
+
+.cart__btn-buy {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  width: 390px;
+  height: 60px;
+  justify-content: end;
+  align-items: flex-end;
+  align-content: end;
+  position: absolute;
+  top: 89%;
+}
+
+.cart__empty {
+  color: #353131;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  margin-top: 50%;
+  justify-self: center;
 }/*# sourceMappingURL=Cart.css.map */
